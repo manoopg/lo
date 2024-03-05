@@ -1,0 +1,91 @@
+<html lang="ar"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اسم الكلمة</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* تعديل التصميم لتظهر اسم الكلمة كزر تفاعلي */
+        h1 {
+            cursor: pointer; /* تغيير المؤشر إلى علامة يد تشير إلى أن العنصر قابل للنقر */
+            color: #0D0E26; /* لون النص الافتراضي */
+            text-decoration: none; /* إزالة التأثيرات الافتراضية للروابط */
+            transition: color 0.3s ease; /* تحويل لون النص بشكل سلس عند التفاعل */
+        }
+
+        /* تغيير لون النص عند تحريك المؤشر */
+        h1:hover {
+            color: #BF5E81; /* تغيير لون النص عند تحريك المؤشر */
+        }
+
+        /* تغيير لون النص عند الضغط */
+        h1:active {
+            color: #0D0E26; /* تغيير لون النص عند الضغط */
+        }
+
+        /* تصميم زر الرجوع */
+        .back-button-container {
+            text-align: center; /* محاذاة النص بالوسط */
+            margin-top: 20px; /* تباعد أعلى الزر */
+        }
+
+        /* تصميم الزر نفسه */
+        .back-button {
+            background-color: #BF5E81; /* لون الخلفية */
+            color: #fff; /* لون النص */
+            padding: 10px 20px; /* تباعد داخلي للزر */
+            border: none; /* إزالة حدود الزر */
+            border-radius: 5px; /* إنحناء الحواف */
+            cursor: pointer; /* تغيير المؤشر إلى علامة يد تشير إلى أن العنصر قابل للنقر */
+            transition: background-color 0.3s ease; /* تحويل لون الخلفية بشكل سلس عند التفاعل */
+        }
+
+        /* تغيير لون الخلفية عند تحريك المؤشر */
+        .back-button:hover {
+            background-color: #ff7b9c; /* تغيير لون الخلفية عند تحريك المؤشر */
+        }
+
+        /* تغيير لون الخلفية عند الضغط */
+        .back-button:active {
+            background-color: #5c2d3e; /* تغيير لون الخلفية عند الضغط */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="D:\lolo learn script 0\لوجو.png" alt="شعار التطبيق">
+        </div>
+        <!-- صورة الكلمة -->
+        <img src="حمار.jpeg" alt="صورة الكلمة">
+        <!-- اسم الكلمة باللغة العربية كزر تفاعلي -->
+        <h1 onclick="playAudio('حمار.mp3')">حمار</h1>
+        <!-- اسم الكلمة باللغة الإنجليزية كزر تفاعلي -->
+        <h1 onclick="speakEnglishWord()">donkey</h1>
+        <!-- زر الرجوع داخل خانة تفاعلية -->
+        <div class="back-button-container" onclick="goToCategory()">
+            <button class="back-button">حيوانات</button>
+        </div>
+    </div>
+
+    <!-- تشغيل ملف الصوت عند النقر على الكلمة -->
+    <script>
+        function playAudio(audioFile) {
+            const audio = new Audio(audioFile);
+            audio.play();
+        }
+
+        // النطق بالكلمة باللغة الإنجليزية
+        function speakEnglishWord() {
+            var englishWord = "donkey"; // يمكنك استبدال "Word Name" بالكلمة التي تريد نطقها
+            var synthesis = window.speechSynthesis;
+            var utterance = new SpeechSynthesisUtterance(englishWord);
+            synthesis.speak(utterance);
+        }
+
+        // الانتقال إلى صفحة التصنيفات
+        function goToCategory() {
+            window.location.href = "حيوانات.html"; // استبدل بالمسار الصحيح لصفحة التصنيفات
+        }
+    </script>
+
+</body></html>

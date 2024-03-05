@@ -1,0 +1,94 @@
+<html lang="ar"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حيوانات</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* تنسيق الكلمات كأزرار */
+        .word-button {
+            display: block;
+            width: 200px;
+            height: 50px;
+            margin: 20px auto;
+            text-align: center;
+            line-height: 50px;
+            background-color: #F28E85; /* لون خلفية الزر */
+            color: #fff; /* لون النص */
+            border-radius: 10px;
+            text-decoration: none; /* إزالة التزيين الافتراضي للروابط */
+            font-size: 20px;
+            transition: background-color 0.3s ease; /* تحويل لون الخلفية بتأثير متسلسل */
+        }
+
+        /* تنسيق التحويل عند التحويم */
+        .word-button:hover {
+            background-color: #BF5E81; /* لون خلفية الزر عند التحويم */
+        }
+
+        /* تصميم زر الرجوع */
+        .back-button-container {
+            text-align: center; /* محاذاة النص بالوسط */
+            margin-top: 20px; /* تباعد أعلى الزر */
+        }
+
+        /* تصميم الزر نفسه */
+        .back-button {
+            background-color: #BF5E81; /* لون الخلفية */
+            color: #fff; /* لون النص */
+            padding: 10px 20px; /* تباعد داخلي للزر */
+            border: none; /* إزالة حدود الزر */
+            border-radius: 5px; /* إنحناء الحواف */
+            cursor: pointer; /* تغيير المؤشر إلى علامة يد تشير إلى أن العنصر قابل للنقر */
+            transition: background-color 0.3s ease; /* تحويل لون الخلفية بشكل سلس عند التفاعل */
+        }
+
+        /* تغيير لون الخلفية عند تحريك المؤشر */
+        .back-button:hover {
+            background-color: #ff7b9c; /* تغيير لون الخلفية عند تحريك المؤشر */
+        }
+
+        /* تغيير لون الخلفية عند الضغط */
+        .back-button:active {
+            background-color: #5c2d3e; /* تغيير لون الخلفية عند الضغط */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="D:\lolo learn script 0\لوجو.png" alt="شعار التطبيق">
+        </div>
+        <h1>الحيوانات</h1>
+        <!-- أزرار الكلمات -->
+        <a href="ارنب.html" class="word-button">أرنب-rabbit</a>
+        <a href="اسد.html" class="word-button">أسد-Lion</a>
+        <a href="بقرة.html" class="word-button">بقرة-cow</a>
+        <a href="تعبان.html" class="word-button">تعبان-snake</a>
+        <a href="تعلب.html" class="word-button">تعلب-fox</a>
+        <a href="تمساح.html" class="word-button">تمساح-crocodile</a>
+        <a href="جمل.html" class="word-button">جمل-camel</a>
+        <a href="حصان.html" class="word-button">حصان-horse</a>
+        <a href="حمار.html" class="word-button">حمار-donkey</a>
+        <a href="خروف.html" class="word-button">خروف-sheep</a>
+        <a href="دب.html" class="word-button">دب-bear</a>
+        <a href="فار.html" class="word-button">فار-mouse</a>
+        <a href="فيل.html" class="word-button">فيل-elephant</a>
+        <a href="قرد.html" class="word-button">قرد-monkey</a>
+        <a href="قطة.html" class="word-button">قطة-cat</a>
+        <a href="كلب.html" class="word-button">كلب-dog</a>
+        <!-- يمكنك إضافة مزيد من الكلمات هنا -->
+        <!-- زر الرجوع داخل خانة تفاعلية -->
+        <div class="back-button-container" onclick="goBack()">
+            <button class="back-button">التصنيفات</button>
+        </div>
+    </div>
+
+    <!-- العودة إلى الصفحة السابقة -->
+    <script>
+        function goBack() {
+            location.href = "D:/lolo learn script 0/تصنيفات/قوائم.html";
+        }
+    </script>
+
+
+</body></html>
